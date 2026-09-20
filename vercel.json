@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/bot.js": {
+      "runtime": "nodejs20.x"
+    },
+    "api/send-photo.js": {
+      "runtime": "nodejs20.x"
+    }
+  }
+}
