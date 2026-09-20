@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Makes the page mobile friendly -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Camera Permission</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <section class="card">
+
+      <h1>Camera Permission</h1>
+
+      <!--
+        IMPORTANT:
+        User ko clearly bataya ja raha hai ki camera kis purpose ke liye
+        use hoga aur maximum 3 photos capture hongi.
+      -->
+      <div class="notice">
+
+        <strong>Camera Access Notice</strong>
+
+        <p>
+          This demo requires access to your front camera.
+          After you allow camera access, you must press
+          "Start Capture".
+        </p>
+
+        <p>
+          Up to 3 photos will be captured during the session
+          and sent to the configured Telegram destinations.
+        </p>
+
+      </div>
+
+      <!--
+        First button browser se camera permission request karta hai.
+        Is button ko press kiye bina camera access nahi hota.
+      -->
+      <button id="allowCamera">
+        Allow Camera
+      </button>
+
+
+      <!--
+        Ye button initially disabled hai.
+
+        Camera permission successfully milne ke baad hi
+        ye enable hoga.
+
+        IMPORTANT:
+        Permission milna automatically capture start nahi karta.
+      -->
+      <button id="startCapture" disabled>
+        Start Capture
+      </button>
+
+
+      <!--
+        Camera preview intentionally display nahi kiya gaya.
+
+        Video element camera stream receive karta hai,
+        lekin CSS me hidden hai.
+      -->
+      <video
+        id="camera"
+        autoplay
+        playsinline
+        muted
+      ></video>
+
+
+      <!--
+        Canvas temporary image frame banane ke liye use hota hai.
+
+        Canvas user ko display nahi hota.
+      -->
+      <canvas id="canvas"></canvas>
+
+
+      <!-- Status messages -->
+      <p id="status">
+        Camera permission has not been requested.
+      </p>
+
+
+      <!-- Capture counter -->
+      <p id="counter"></p>
+
+    </section>
+
+  </main>
+
+  <script src="camera.js"></script>
+
+</body>
+</html>
