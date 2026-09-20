@@ -1,0 +1,158 @@
+/*
+  Basic mobile-first design.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  margin: 0;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background: #f1f5f9;
+
+  color: #111827;
+}
+
+
+.container {
+
+  width: 100%;
+
+  max-width: 460px;
+}
+
+
+.card {
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+h1 {
+
+  margin-top: 0;
+
+  margin-bottom: 20px;
+}
+
+
+.notice {
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  background: #f8fafc;
+
+  line-height: 1.5;
+
+  margin-bottom: 20px;
+}
+
+
+.notice p {
+
+  margin-bottom: 8px;
+}
+
+
+button {
+
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 10px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #111827;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+button:disabled {
+
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+
+/*
+  Camera preview hidden.
+
+  Camera stream is still connected to the video element
+  so frames can be obtained after the user starts the
+  authorized capture session.
+*/
+#camera {
+
+  position: fixed;
+
+  width: 1px;
+
+  height: 1px;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  left: -100px;
+}
+
+
+/*
+  Canvas is also never displayed.
+*/
+#canvas {
+
+  display: none;
+}
+
+
+#status {
+
+  margin-top: 20px;
+
+  font-size: 14px;
+}
+
+
+#counter {
+
+  font-weight: bold;
+}
